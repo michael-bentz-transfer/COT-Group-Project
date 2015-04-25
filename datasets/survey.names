@@ -1,0 +1,21 @@
+1. Title: Social Network Survey Data
+
+2. Sources:
+  (a) COT 4501 Survey
+
+3. Number of Instances: 187
+
+4. Number of Attributes: 11 (including the class attributes)
+
+5. Attribute Information:
+  1. Age
+  2. Gender
+  3. Frequency of outdoor activity
+  4. Hours/Week spent on Social Networks
+  5. Does the person enjoy photography as a hobby
+  6. What the person enjoys posting online
+  7. Selfies posted per week
+  8. Social media used for recipes, fashion or celebrity gossip
+  9. Social media usage during major events (World Cup, Superbowl etc.)
+  10. Likeliness of posting controversial material online
+  11. Social Network self-identification
