@@ -1,18 +1,17 @@
-function [ W, minX, maxX ] = train(filename, numToTrain)
+function [ x, y, W, minX, maxX ] = train(filename, numToTrain)
 %UNTITLED Summary of this function goes here
 %   Detailed explanation goes here
 
 % first column should be classes, others are features
-A = dlmread(filename);
+Data = dlmread(filename);
 
 if (nargin < 2)
-    numToTrain = length(A);
+    numToTrain = length(Data);
 end
 
 % TODO: choose a random sample from A of size numToTrain
-
-yRaw = A(1:numToTrain,1);
-xRaw = A(1:numToTrain,2:end);
+yRaw = Data(:,1);
+xRaw = Data(:,2:end);
 
 [numInstances, numFeatures] = size(xRaw);
 
@@ -26,7 +25,7 @@ end
 numClasses = length(classes);
 
 % create actual y matrix
-y = zeros(150, numClasses);
+y = zeros(numInstances, numClasses);
 for i = 1:numInstances
     class = yRaw(i);
     y(i, class) = 1;
