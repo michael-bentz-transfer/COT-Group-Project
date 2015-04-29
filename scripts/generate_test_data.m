@@ -25,8 +25,8 @@ while(i < m)
 end
 
 %Output files
-dlmwrite(strcat(filename, '.train'), Train, ' ');
-dlmwrite(strcat(filename, '.test'), Test, ' ');
+dlmwrite(strcat('../datasets/', filename, '.train'), Train, ' ');
+dlmwrite(strcat('../datasets/', filename, '.test'), Test, ' ');
 
 X = Train;
 Y = Test;
