@@ -1,4 +1,4 @@
-function [ x, y, W, minX, maxX ] = train(filename, numToTrain)
+function [ x, y, W, numTrained ] = train(filename, trainPercent)
 %UNTITLED Summary of this function goes here
 %   Detailed explanation goes here
 
@@ -6,7 +6,7 @@ function [ x, y, W, minX, maxX ] = train(filename, numToTrain)
 Data = dlmread(filename);
 
 if (nargin < 2)
-    numToTrain = length(Data);
+    trainPercent = 100;
 end
 
 % TODO: choose a random sample from A of size numToTrain
@@ -14,6 +14,8 @@ yRaw = Data(:,1);
 xRaw = Data(:,2:end);
 
 [numInstances, numFeatures] = size(xRaw);
+
+numToTrain = round((trainPercent / 100) * numInstances);
 
 classes = [];
 for i = 1:numInstances
@@ -52,6 +54,7 @@ end
 
 % TODO: make sure that left sum is invertible; if not, add some mu * eye()
 W = inv(left) * right;
+numTrained = numToTrain;
 
 end
 
