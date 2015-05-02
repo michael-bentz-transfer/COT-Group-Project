@@ -6,7 +6,6 @@ function [] = classifyData(file, trainPercent)
 [~, numClasses] = size(y);
 numClassified = numInstances - numTrained;
 yPredicted = zeros(numClassified, numClasses);
-size(yPredicted)
 
 numCorrect = 0;
 
