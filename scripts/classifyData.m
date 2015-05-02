@@ -6,7 +6,6 @@ function [] = classifyData(file, trainPercent)
 [~, numClasses] = size(y);
 numClassified = numInstances - numTrained;
 yPredicted = zeros(numClassified, numClasses);
-fprintf('size(yPredicted\n');
 size(yPredicted)
 
 numCorrect = 0;
@@ -26,5 +25,6 @@ for i = numTrained + 1 : numInstances
 end
 
 yPredicted
+W
 fprintf('Predicted %d correctly of %d -- %f %%\n', numCorrect, numClassified, numCorrect/numClassified);
 end
