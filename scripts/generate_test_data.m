@@ -14,7 +14,7 @@ Train = [];
 i = 0;
 while(i < m)
     first = i + 1;
-    len = size(find(Data(:,1) == Data(first,1)),1);
+    len = size(find(Data(:,1) == Data(first,1)));
     i = i + len;
     last = i;
     
@@ -28,6 +28,7 @@ end
 dlmwrite(strcat('../datasets/', filename, '.train'), Train, ' ');
 dlmwrite(strcat('../datasets/', filename, '.test'), Test, ' ');
 
+%Return training and testing datasets
 X = Train;
 Y = Test;
 
