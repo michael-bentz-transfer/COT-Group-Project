@@ -9,11 +9,6 @@ To get started, type one of these: helpwin, helpdesk, or demo.
 For product information, visit www.mathworks.com.
  
 >> 
-ans =
-
-   275     2
-
-
 yPredicted =
 
      0     1

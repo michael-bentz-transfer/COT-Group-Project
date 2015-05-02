@@ -8,13 +8,7 @@
 To get started, type one of these: helpwin, helpdesk, or demo.
 For product information, visit www.mathworks.com.
  
->> size(yPredicted
-
-ans =
-
-    90     3
-
-
+>> 
 yPredicted =
 
      0     0     1
@@ -107,6 +101,14 @@ yPredicted =
      0     1     0
      0     1     0
      0     0     1
+
+
+W =
+
+   -0.2421   -1.1502    0.6309
+    1.5817    0.1847   -0.2466
+    0.1656    3.6476   -1.5268
+   -0.8020   -2.1956    1.9598
 
 Predicted 67 correctly of 90 -- 0.744444 %
 >> 
