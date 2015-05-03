@@ -14,7 +14,7 @@ Train = [];
 i = 0;
 while(i < m)
     first = i + 1;
-    len = size(find(Data(:,1) == Data(first,1)));
+    len = size(find(Data(:,1) == Data(first,1)),1);
     i = i + len;
     last = i;
     
@@ -24,9 +24,12 @@ while(i < m)
     Test = [Test; removerows(Data(first:last,:), trainInd)];
 end
 
+%trainPer = num2str((1 - percent)*100);
+testPer = num2str(percent*100);
+
 %Output files
-dlmwrite(strcat('../datasets/', filename, '.train'), Train, ' ');
-dlmwrite(strcat('../datasets/', filename, '.test'), Test, ' ');
+dlmwrite(strcat('../datasets/', filename, '.', testPer,  '.train'), Train, ' ');
+dlmwrite(strcat('../datasets/', filename, '.', testPer, '.test'), Test, ' ');
 
 %Return training and testing datasets
 X = Train;
